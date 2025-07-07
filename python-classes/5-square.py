@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-"""Defines a square class with size validation and property."""
+"""Defines a square class with print functionality."""
 
 
 class Square:
-    """Represents a square with validated size accessed via property.
+    """Represents a square with validated size, area calculation, and printing.
 
     This class provides a square with size encapsulation through properties,
-    ensuring size is a non-negative integer and allowing area calculation.
+    ensuring size is a non-negative integer. It can also calculate its area
+    and print a visual representation of the square using '#' characters.
     """
 
     def __init__(self, size=0):
@@ -16,7 +17,7 @@ class Square:
             size (int, optional): The size of the square. Defaults to 0.
                 Must be a non-negative integer.
         """
-        self.size = size # Calls the setter to validate and set __size
+        self.size = size
 
     @property
     def size(self):
@@ -51,3 +52,14 @@ class Square:
             int: The area of the square (size * size).
         """
         return self.__size * self.__size
+
+    def my_print(self):
+        """Prints the square to stdout using the character '#'.
+
+        If the size is 0, prints an empty line.
+        """
+        if self.__size == 0:
+            print()
+        else:
+            for _ in range(self.__size):
+                print("#" * self.__size)
