@@ -42,7 +42,7 @@ class Rectangle:
 
     def width(self, value):
 
-        """to set the width value"""
+        """ to set the width value"""
 
         if not isinstance(value, int):
 
@@ -70,7 +70,7 @@ class Rectangle:
 
     def height(self, value):
 
-        """Setter method to set the height value"""
+        """to set the height value"""
 
         if not isinstance(value, int):
 
@@ -92,9 +92,33 @@ class Rectangle:
 
 
 
+    @staticmethod
+
+    def bigger_or_equal(rect_1, rect_2):
+
+        """Returns the biggest rectangle based on area"""
+
+        if not isinstance(rect_1, Rectangle):
+
+            raise TypeError("rect_1 must be an instance of Rectangle")
+
+        if not isinstance(rect_2, Rectangle):
+
+            raise TypeError("rect_2 must be an instance of Rectangle")
+
+        if rect_1.area() == rect_2.area() or rect_1.area() > rect_2.area():
+
+            return rect_1
+
+        if rect_1.area() < rect_2.area():
+
+            return rect_2
+
+
+
     def perimeter(self):
 
-        """Returns the perimeter of the rectangle"""
+        """ the perimeter of the rectangle"""
 
         r_perimeter = 2 * (self.__width + self.__height)
 
@@ -112,7 +136,7 @@ class Rectangle:
 
     def __del__(self):
 
-        """Detects the deletion and returns bye when deleted"""
+        """Detects the deletion and returns bye """
 
         print("Bye rectangle...")
 
@@ -135,13 +159,19 @@ class Rectangle:
             for i in range(self.__height):
 
                 for x in range(self.__width):
+
                     rect = rect + str(self.print_symbol)
+
+
+
                 rect += '\n'
 
             return rect[:-1]
 
+
+
     def __repr__(self):
 
-        """Printing the string representation officially"""
+        """Printing the string representation """
 
         return "Rectangle({}, {})".format(self.__width, self.__height)
