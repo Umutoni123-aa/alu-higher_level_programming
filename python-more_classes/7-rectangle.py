@@ -8,9 +8,11 @@
 
 class Rectangle:
 
-    """DEfines a rectangle"""
+    """Defines a rectangle"""
 
     number_of_instances = 0
+
+    print_symbol = '#'
 
 
 
@@ -30,7 +32,7 @@ class Rectangle:
 
     def width(self):
 
-        """ to get the width value"""
+        """to get the width value"""
 
         return self.__width
 
@@ -58,7 +60,7 @@ class Rectangle:
 
     def height(self):
 
-        """Assigning the height value"""
+        """to get the height value"""
 
         return self.__height
 
@@ -92,7 +94,7 @@ class Rectangle:
 
     def perimeter(self):
 
-        """ Perimeter of the rectangle"""
+        """Returns the perimeter of the rectangle"""
 
         r_perimeter = 2 * (self.__width + self.__height)
 
@@ -133,19 +135,13 @@ class Rectangle:
             for i in range(self.__height):
 
                 for x in range(self.__width):
-
-                    rect = rect + '#'
-
-
-
+                    rect = rect + str(self.print_symbol)
                 rect += '\n'
 
             return rect[:-1]
 
-
-
     def __repr__(self):
 
-        """Prints the string representation officially"""
+        """Printing the string representation officially"""
 
         return "Rectangle({}, {})".format(self.__width, self.__height)
