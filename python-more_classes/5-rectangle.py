@@ -1,41 +1,41 @@
 #!/usr/bin/python3
-"""Defines a rectangle"""
+""" Defines the rectangle """
 
 
 class Rectangle:
     """Defines a rectangle"""
 
     def __init__(self, width=0, height=0):
-        """initializes the data"""
+        """initializes the variables"""
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Getter method to get the width value"""
+        """Getting the width value"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Setter method to set the width value"""
+        """Setting the width value"""
         if not isinstance(value, int):
-            raise TypeError("The width must be integer please")
+            raise TypeError("width must be an integer")
         elif value < 0:
-            raise ValueError("The width must be >= 0")
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @property
     def height(self):
-        """Getter method to get the height value"""
+        """Rwturns the height value"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Setter method to set the height value"""
+        """assigning the height value"""
         if not isinstance(value, int):
-            raise TypeError("The height must be integer please")
+            raise TypeError("height must be an integer")
         elif value < 0:
-            raise ValueError("The height must be >= 0")
+            raise ValueError("height must be >= 0")
         self.__height = value
 
     def area(self):
@@ -43,13 +43,17 @@ class Rectangle:
         return r_area
 
     def perimeter(self):
-        """Returns the perimeter of the rectangle"""
+        """This will return the perimeter of the rectangle"""
         r_perimeter = 2 * (self.__width + self.__height)
 
         if self.__width == 0 or self.__height == 0:
             return 0
         else:
             return r_perimeter
+
+    def __del__(self):
+        """Detects the deletion and returns bye when deleted"""
+        print("Bye rectangle...")
 
     def __str__(self):
         """Prints the rectangle using #"""
@@ -65,5 +69,5 @@ class Rectangle:
             return rect[:-1]
 
     def __repr__(self):
-        """Prints the string representation of the rectangle officially"""
+        """Prints the string representation officially"""
         return "Rectangle({}, {})".format(self.__width, self.__height)
