@@ -8,7 +8,7 @@
 
 class Rectangle:
 
-    """Defines a rectangle"""
+    """Defining a rectangle"""
 
     number_of_instances = 0
 
@@ -18,7 +18,7 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
 
-        """initializes the variables"""
+        """initializing the variables"""
 
         self.width = width
 
@@ -32,7 +32,7 @@ class Rectangle:
 
     def width(self):
 
-        """to get the width value"""
+        """ to get the width value"""
 
         return self.__width
 
@@ -70,7 +70,7 @@ class Rectangle:
 
     def height(self, value):
 
-        """to set the height value"""
+        """Setter method to set the height value"""
 
         if not isinstance(value, int):
 
@@ -118,7 +118,7 @@ class Rectangle:
 
     def perimeter(self):
 
-        """ the perimeter of the rectangle"""
+        """Returning the perimeter of the rectangle"""
 
         r_perimeter = 2 * (self.__width + self.__height)
 
@@ -134,9 +134,19 @@ class Rectangle:
 
 
 
+    @classmethod
+
+    def square(cls, size=0):
+
+        """returning a new rectangle instance with width == height == size"""
+
+        return cls(size, size)
+
+
+
     def __del__(self):
 
-        """Detects the deletion and returns bye """
+        """Detects the deletion and returns bye"""
 
         print("Bye rectangle...")
 
@@ -174,4 +184,4 @@ class Rectangle:
 
         """Printing the string representation """
 
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+        return "Rectangle({}, {})".format(self.__width, self._height)
