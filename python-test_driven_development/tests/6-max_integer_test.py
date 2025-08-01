@@ -1,4 +1,5 @@
-x integer using unittest module '''
+#!/usr/bin/python3
+''' Max integer using unittest module '''
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
