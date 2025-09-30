@@ -1,0 +1,33 @@
+# JavaScript Warm Up
+ The assignment is part of the ALU Higher Level Programming track and focuses on scripting with JavaScript using Node.js.
+
+
+
+##  Requirements
+
+- All scripts use Node.js (Ubuntu 20.04, Node.js v14)
+- Files must begin with: `#!/usr/bin/node`
+- Scripts must be executable
+
+alu-higher_level_programming/
+├── javascript-warm_up/
+│   ├── 0-javascript_is_amazing.js
+│   ├── 1-multi_languages.js
+│   ├── 2-arguments.js
+│   ├── 3-value_argument.js
+│   ├── 4-concat.js
+│   ├── 5-to_integer.js
+│   ├── 6-multi_languages_loop.js
+│   ├── 7-multi_c.js
+│   ├── 8-square.js
+│   ├── 9-add.js
+│   ├── 10-factorial.js
+│   ├── 11-second_biggest.js
+│   ├── 12-object.js
+│   ├── 13-add.js
+
+   └── README.md
+
+
+
+Email: u.nada@alustudent.com
